@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+/*set the background to black as a fallback, and define a gradient id*/
+
+.grad1 { /*main gradient for background*/
+	background-color: black; /*legacy support*/
+	background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
+}
+
+.grad2 { /*secondary gradient for top bar elements etc*/
+	background-color: black; /*legacy support*/
+	background-image: linear-gradient(rgba(40,40,40,1),rgba(0,0,0,1));
+}
+
+.grad3 { /*transparent black gradient for overlays etc*/
+	background-color: black; /*legacy support*/
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+}
+
+body {
+	background-color: black; /*legacy support + fill*/
+background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
+}
+
+/*Define font sizes, colours, and types for headings and main text*/
+h1, h1 a {
+	color: white;
+	font-family: Reem Kufi, sans-serif;
+	font-size: 28px;
+}
+
+h2, h2 a {
+	color: white;
+	font-family: Reem Kufi, sans-serif;
+	font-size: 20px;
+}
+h3, h3 a{
+	color: white;
+	font-family: Calibri, sans-serif;
+	font-size: 18px;
+}
+p {
+	color: white;
+	font-family: Calibri, sans-serif;
+	font-size: 15px;
+}
+
+a { /*remove underline and colour from links*/
+	text-decoration: none;
+}

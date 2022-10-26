@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+/*CSS is read from top to bottom, but some things are applied with priority
+Hierarchy:
+ID+type
+ID
+Class+type
+class
+type
+universal*/
+
+/*type selector*/
+body { /*selector is body, declaration is between the brackets*/
+	background-color: grey;  /*background is property, Value is grey*/
+	
+}
+/*universal selector - universal selectors are overwritten by type selectors, so background won't change*/
+* {
+	color: blue;
+}
+
+/*class selector*/
+.red {
+	color: red;
+}
+
+/*id selector*/
+#blue {
+	color: blue;
+}
+
+/*descendant selector (parent/child thing) - only li within a ulis selected here*/
+ul li {
+	color: white;
+}
+
+/*multiple selectors*/
+h1, p, a, .red {
+	background-color: pink;
+}
+
+/*pseudoselector - makes hovered links red*/
+a.hover {
+	color: red;
+}
