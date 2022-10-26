@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.animation {
+	width: 100px;
+	height: 100px;
+	background-color: darkblue;
+	box-shadow: 0px 0px 0px 4px black;
+	animation-name: test;
+	position: relative;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear; /*ease/linear/ease-in/ease-out/ease-in-out*/
+}
+
+.animation:hover {
+		background-color: red;
+		box-shadow: 0px 0px 5px 5px red, 0px 0px 0px 4px black;
+}
+
+@keyframes test {
+	0% {background-color: darkblue; left: 0px; top: 0px; scale: 1;}
+	50% {background-color: white; left: 50px; top: 50px; scale: 1.2;}
+	100% {background-color: darkred; left: 0px; top: 0px; scale: 1;}
+}
+
+
+.animation2 {
+	justify-content: right;
+	width: 50px;
+	height: 50px;
+	background-color: grey;
+	animation-name: anim2;
+	position: relative;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	
+}
+
+@keyframes anim2 {
+	0% {top:10px}
+	50% {top: 100px}
+	100% {top: 10px}
+}

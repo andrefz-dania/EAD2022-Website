@@ -12,6 +12,7 @@ universal*/
 /*type selector*/
 body { /*selector is body, declaration is between the brackets*/
 	background-color: grey;  /*background is property, Value is grey*/
+	/* background-image: url("Img/thicc.jpg"); *//*img source as example. Overwritten currenly*/
 	
 }
 /*universal selector - universal selectors are overwritten by type selectors, so background won't change*/
@@ -20,8 +21,35 @@ body { /*selector is body, declaration is between the brackets*/
 }
 
 /*class selector*/
-.red {
+.red { /*example of a bunch of text properties*/ 
 	color: red;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: black;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 18px;
+	text-align: center;
+	display: inline;
+	margin: 50px;
+	padding: 10px;
+	/*absolute position*/
+	top: 0px;
+	right: 100px;
+	position: absolute/*fixed/sticky/relative/absolute*/;
+}
+
+.box { /*more property examples*/
+	background-color: black;
+	height: 10%;
+	width: 10%;
+	justify-content: center;
+	border-width: 5px;
+	border-color: rgba(19,31,121,0.72);
+	border-style: double;
+}
+.box2 { /*shorthand version*/
+	border: 2px dotted rgba(255,255,0,0.7);
+	
 }
 
 /*id selector*/
@@ -37,9 +65,17 @@ ul li {
 /*multiple selectors*/
 h1, p, a, .red {
 	background-color: pink;
+	font-family: itc-avant-garde-gothic-pro,sans-serif;
+font-weight: 700;
+font-style: normal;
+	text-shadow: 0px 0px 4px blue;
 }
 
 /*pseudoselector - makes hovered links red*/
 a.hover {
 	color: red;
 }
+
+
+
+

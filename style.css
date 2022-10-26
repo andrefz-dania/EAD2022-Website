@@ -9,7 +9,10 @@
 
 .grad2 { /*secondary gradient for top bar elements etc*/
 	background-color: black; /*legacy support*/
-	background-image: linear-gradient(rgba(40,40,40,1),rgba(0,0,0,1));
+	background-image: linear-gradient(rgba(70,70,70,1),rgba(40,40,40,1));
+	padding: 20px 0px 20px 0px;
+	justify-content: center;
+	text-align: center;
 }
 
 .grad3 { /*transparent black gradient for overlays etc*/
@@ -22,11 +25,22 @@ body {
 background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
 }
 
+.topbar-text {
+	text-align: center;
+	justify-content: center;
+}
+
+.topbar {
+	padding: 10px;
+}
+
 /*Define font sizes, colours, and types for headings and main text*/
 h1, h1 a {
 	color: white;
-	font-family: Reem Kufi, sans-serif;
+	font-family: "Reem Kufi", "Century Gothic", sans-serif;
 	font-size: 28px;
+	display: inline;
+
 }
 
 h2, h2 a {
