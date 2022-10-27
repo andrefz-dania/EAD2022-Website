@@ -1,101 +1,56 @@
 @charset "utf-8";
 /* CSS Document */
-/*set the background to black as a fallback, and define a gradient id*/
 
-.topgrid {
+body {
+	background-color: #111111; /*fallback for browsers that do not support gradients*/
+	color: white;
+	margin: 0px;
+}
+
+/*Fonts and text*/
+h1, h1 a {
+	color: white;
+	font-size: 28px;
+	font-family: "reem kufi", "century gothic", "sans serif";
+}
+
+/*Classes for displaying grid*/
+
+.mgrid { /*main grid*/
+	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 10% 5% 10% 5% 10% 5% 10% 5% 10% 5% 1fr;
-	grid-template-rows: 50px 50px;
-	text-align: center;
+	grid-template-columns: 1fr 100px 1fr;
+	grid-template-rows: 100px;
+	align-content: center;
+	margin: 0px;
+	padding: 0px;
 	position: fixed;
 }
 
-.grad1 { /*main gradient for background*/
+.mge { /*main grid element*/
+	/*border: 1px solid white;*/ /*temporary to see boxes*/
+}
+
+.bar { /*top bar navigation background*/
+	height: 90px;
+	width: 100%;
 	background-color: #262626; /*legacy support*/
-	background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
+	box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0px;
 }
 
-.grad2 { /*secondary gradient for top bar elements etc*/
+.tri { /*top bar triangular outcrop background*/
+	height: 100px;
+	width: 100px;
 	background-color: #262626; /*legacy support*/
-	background-image: linear-gradient(rgba(70,70,70,1),rgba(40,40,40,1));
-	justify-content: center;
-	text-align: center;
-	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
-	margin: 0px;
+	box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+	transform: rotate(45deg);
+	margin-top: 22px;
 }
 
-.grad3 { /*transparent black gradient for overlays etc*/
-	background-color: black; /*legacy support*/
-	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+.navmenu {
+	position: fixed;
 }
 
-body {
-	background-color: #262626; /*legacy support + fill*/
-background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
-	margin: 0px;
-}
-
-.topbar-text {
-	text-align: center;
-	justify-content: center;
-}
-
-.topflex {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-wrap: nowrap;
-}
-
-.topdiv-flex {
-	display: flex;
-	width: 5%
-}
-.logo {
-	width: 8%;
-	
-}
-
-/*Define font sizes, colours, and types for headings and main text*/
-h1, h1 a {
-	color: white;
-	font-family: "Reem Kufi", "Century Gothic", sans-serif;
-	font-size: 28px;
-	display: inline;
-
-}
-
-h2, h2 a {
-	color: white;
-	font-family: Reem Kufi, sans-serif;
-	font-size: 20px;
-}
-h3, h3 a{
-	color: white;
-	font-family: Calibri, sans-serif;
-	font-size: 18px;
-}
-p, p a {
-	color: white;
-	font-family: Calibri, sans-serif;
-	font-size: 15px;
-}
-
-a { /*remove underline and colour from links*/
-	text-decoration: none;
-}
-
-@media screen and (max-width: 800px){
-	h1, h1 a {
-		font-size: 20px;
-	}
-	h2, h2 a {
-		font-size: 18px;
-	}
-	h3, h3 a {
-		font-size: 15px;
-	}
-	p, p a {
-		font-size: 12px;
-	}
-}
+/*responsive elements*/

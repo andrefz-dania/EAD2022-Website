@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		.box1{
+			height: 100px;
+			width: 100px;
+			background-color: #262626; /*legacy support*/
+			box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+			transform: rotate(45deg);
+			position: absolute;
+			top: 30px;
+			right: 50%;
+			
+		}
+		.box2{
+			height: 73px;
+			width: 100%;
+			background-color: #262626; /*legacy support*/
+			box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+		}
+		
+		.box3{
+			background-color: blue;
+		}
+		
+		.box4{
+			background-color: red;
+		}
+		
+		.grid {
+			display: grid;
+			grid-template: 1fr 1fr 1fr / 20px 20px;
+		}
+		
+		
+	</style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div class="box2"></div>
+	<div class="box1"></div>
+	<section class="grid">
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box3"></div>
+	</section>
+	
+</body>
+</html>
