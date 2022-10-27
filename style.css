@@ -3,16 +3,16 @@
 /*set the background to black as a fallback, and define a gradient id*/
 
 .grad1 { /*main gradient for background*/
-	background-color: black; /*legacy support*/
+	background-color: #262626; /*legacy support*/
 	background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
 }
 
 .grad2 { /*secondary gradient for top bar elements etc*/
-	background-color: black; /*legacy support*/
+	background-color: #262626; /*legacy support*/
 	background-image: linear-gradient(rgba(70,70,70,1),rgba(40,40,40,1));
-	padding: 20px 0px 20px 0px;
 	justify-content: center;
 	text-align: center;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
 }
 
 .grad3 { /*transparent black gradient for overlays etc*/
@@ -21,7 +21,7 @@
 }
 
 body {
-	background-color: black; /*legacy support + fill*/
+	background-color: #262626; /*legacy support + fill*/
 background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
 }
 
@@ -30,8 +30,22 @@ background-image: linear-gradient(rgba(70,70,70,1),rgba(0,0,0,1));
 	justify-content: center;
 }
 
-.topbar {
-	padding: 10px;
+.topflex {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: nowrap;
+}
+
+.topdiv-flex {
+	display: flex;
+	width: 5%
+}
+.logo {
+	width: 75px;
+	align-content: center;
+	position: absolute;
+	top: 5px;
 }
 
 /*Define font sizes, colours, and types for headings and main text*/
@@ -53,7 +67,7 @@ h3, h3 a{
 	font-family: Calibri, sans-serif;
 	font-size: 18px;
 }
-p {
+p, p a {
 	color: white;
 	font-family: Calibri, sans-serif;
 	font-size: 15px;
@@ -61,4 +75,19 @@ p {
 
 a { /*remove underline and colour from links*/
 	text-decoration: none;
+}
+
+@media screen and (max-width: 800px){
+	h1, h1 a {
+		font-size: 20px;
+	}
+	h2, h2 a {
+		font-size: 18px;
+	}
+	h3, h3 a {
+		font-size: 15px;
+	}
+	p, p a {
+		font-size: 12px;
+	}
 }
