@@ -1,8 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
+	display: grid;
 	background-color: #111111; /*fallback for browsers that do not support gradients*/
+	background-image: linear-gradient(#202020, #111111);
 	color: white;
 	margin: 0px;
 }
@@ -10,16 +16,38 @@ body {
 /*Fonts and text*/
 h1, h1 a {
 	color: white;
-	font-size: 28px;
-	font-family: "reem kufi", "century gothic", "sans serif";
+	font-size: 25px;
+	font-family: "Reem Kufi", "Rubik", "Noto Sans", "century gothic", "calibri", "sans-serif";
+	margin: 0px;
 }
 
-/*Classes for displaying grid*/
+h2, h2 a {
+	color: white;
+	font-size: 30px;
+	font-family: "Reem Kufi", "Rubik", "Noto Sans", "century gothic", "calibri", "sans-serif";
+	margin: 0px;
+}
+
+h3, h3 a {
+	color: white;
+	font-size: 18px;
+	font-family: "Reem Kufi", "Rubik", "Noto Sans", "century gothic", "calibri", "sans-serif";
+	margin: 0px;
+}
+
+p, p a {
+	font-family: "Calibri", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+.logo {
+	scale: 1;
+}
 
 .mgrid { /*main grid*/
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 100px 1fr;
+	grid-template-columns: 1fr 84px 1fr;
 	grid-template-rows: 100px;
 	align-content: center;
 	margin: 0px;
@@ -40,17 +68,58 @@ h1, h1 a {
 	top: 0px;
 }
 
-.tri { /*top bar triangular outcrop background*/
+/*top bar triangular outcrop background - this was a pain to align*/
+.tri { 
 	height: 100px;
 	width: 100px;
 	background-color: #262626; /*legacy support*/
 	box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
 	transform: rotate(45deg);
-	margin-top: 22px;
+	margin-top: 37px;
 }
 
 .navmenu {
 	position: fixed;
+	display: grid;
+	grid-template-columns: minmax(180px,250px) 2em minmax(180px,250px) 2em 80px 2em minmax(180px,250px) 1em minmax(180px,250px);
+	grid-template-rows: 40px 40px 50px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+	justify-content: center;
+	text-align: center;
 }
 
-/*responsive elements*/
+/*main grid element 2*/
+.mge2 { 
+	/*border: 1px solid white; /*temporary to see boxes*/
+}
+/*grid template areas*/
+.content-grid {
+	display: grid;
+	justify-self: center;
+	grid-template-columns: 3em minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px)3em;
+	grid-template-rows: 65px 1fr 1fr 1fr 1fr 1fr 50px 50px;
+	margin-top: 95px;
+}
+
+.title {
+	grid-column: 2 / span 5;
+	grid-row: 1;
+	margin-top: 5px;
+	margin-right: 50px;
+	margin-left: 50px;
+	line-height: 1.2;}
+
+.content {
+	grid-column: 2 / span 5;
+	grid-row: 2 / span 5;}
+
+footer {
+	grid-column: 1 / span 7;
+	grid-row: 7 / span 2;
+}
+
+/*responsive elements for under 800px*/
+@media screen
