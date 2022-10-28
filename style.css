@@ -128,8 +128,26 @@ p, p a {
 	margin-right: 10px;
 	border-radius: 100px;
 }
+/*mobile-only classes*/
+.logo-mobile {
+	display:none;
+}
 
+.navbar-mobile {
+	display:none;
+}
+.borgar {
+	display: none;
+	margin-top: 1.4em;
+	margin-right: 0.5em;
+	height: 2.75em;
+}
 
+.title-mobile {
+	font-size: 34px;
+	margin-top: 0.6em;
+	margin-left: 1em;
+}
 
 /*main grid element 2*/
 .mge2 { 
@@ -137,7 +155,7 @@ p, p a {
 }
 
 .mge3 { 
-	/* border: 1px solid white; /*temporary to see boxes*/
+	/*border: 1px solid white; /*temporary to see boxes*/
 	/*margin-top: 45px;*/
 }
 /*grid template areas*/
@@ -169,4 +187,39 @@ footer {
 /*responsive elements for under 800px*/
 @media screen and (max-width: 800px) {
 	h1, h1 a {font-size: 20px}
+	
+	.line-grid,
+	.navmenu{
+		display: none;
+	}
+	
+	.mgrid {
+		grid-template-columns: 1.5em 0fr 1fr;
+	}
+	
+	.navbar-mobile {
+		display: grid;
+		position: fixed;
+		grid-template-columns: 80px 1fr 80px;
+		grid-template-rows: 80px;
+		width: 100%;
+	}
+	
+	.logo-mobile {
+		display: block;
+		margin-top: 0.5em;
+		margin-left: 0.4em;
+		width: 70px;
+	}
+	.borgar {
+		display: block;
+	}
+	
+	.tri{
+		order: 0;
+		width: 80px;
+		height: 80px;
+		position: fixed;
+		margin-top: 47px
+	}
 }
