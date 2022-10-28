@@ -13,6 +13,24 @@ body {
 	margin: 0px;
 }
 
+footer {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1em 1fr 25px 25px 25px 1fr;
+	padding-top: 3em;
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1),rgba(0,0,0,1));
+	bottom: 0px;
+	position: fixed;
+}
+
+footer p {
+	grid-row: 2;
+	grid-column: 1 / span 6;
+	text-align: center;
+	font-size: 14px;
+	color: #aaaaaa;
+}
+
 /*Fonts and text*/
 h1, h1 a {
 	color: white;
@@ -101,11 +119,12 @@ p, p a {
 	justify-content: center;
 	margin-top: 45px;
 }
+/*draw ing of decorative elements*/
 .line-full {
 	background-color: white;
 	width: minmax(80,260);
-	height: 4px;
-	margin-top: 9px;
+	height: 3px;
+	margin-top: 8px;
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 100px;
@@ -113,8 +132,8 @@ p, p a {
 .line-fade-r {
 	background-image: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0));
 	width: minmax(80,260);
-	height: 4px;
-	margin-top: 9px;
+	height: 3px;
+	margin-top: 8px;
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 100px;
@@ -122,12 +141,53 @@ p, p a {
 .line-fade-l {
 	background-image: linear-gradient(to left, rgba(255,255,255,1),rgba(255,255,255,0));
 	width: minmax(80,260);
-	height: 4px;
-	margin-top: 9px;
+	height: 3px;
+	margin-top: 8px;
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 100px;
 }
+
+.diamond-empty {
+	display: inline;
+	height: 18px;
+	width: 18px;
+	border: 3px solid white;
+	border-radius: 4px;
+	rotate: 45deg;
+	justify-self: center;
+}
+
+.diamond-full {
+	display: inline;
+	height: 18px;
+	width: 18px;
+	background-color: white;
+	border: 3px solid white;
+	border-radius: 4px;
+	rotate: 45deg;
+	justify-self: center;
+}
+
+/*adjust diamond shapes when classified as small*/
+.diamond-full[data-type="small"],
+.diamond-empty[data-type="small"]{
+	height: 14px;
+	width: 14px;
+	border-radius: 3px;
+}
+
+/*make diamonds glow when hovered or active*/
+.diamond-empty:hover {
+	box-shadow: 0px 0px 4px white;
+}
+
+.diamond-full[data-type="active"],
+.diamond-empty[data-type="active"]{
+	box-shadow: 0px 0px 4px white;
+}
+
+
 /*mobile-only classes*/
 .logo-mobile {
 	display:none;
@@ -185,7 +245,7 @@ footer {
 }
 
 /*responsive elements for under 800px*/
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
 	h1, h1 a {font-size: 20px}
 	
 	.line-grid,
@@ -196,7 +256,24 @@ footer {
 	.mgrid {
 		grid-template-columns: 1.5em 0fr 1fr;
 	}
+
+	.content-grid {
+		grid-template-columns: 2em 1fr 1fr 2em;
+	}
 	
+	.title {
+		grid-column: 2 / span 2;
+		grid-row: 1;
+		margin-top: 5px;
+		margin-right: 3em;
+		margin-left: 4em;
+		line-height: 1.2;}
+	
+	.content {
+		grid-column: 2 / span 2;
+		grid-row: 2 / span 5;}
+
+
 	.navbar-mobile {
 		display: grid;
 		position: fixed;
@@ -221,5 +298,9 @@ footer {
 		height: 80px;
 		position: fixed;
 		margin-top: 47px
+	}
+
+	footer {
+		display: none;
 	}
 }
