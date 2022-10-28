@@ -2,7 +2,7 @@
 /* CSS Document */
 
 * {
-	box-sizing: border-box;
+	box-sizing: border-box; /* box effects dont overflow their defined area with margins, borders etc*/
 }
 
 body {
@@ -47,7 +47,7 @@ p, p a {
 .mgrid { /*main grid*/
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 84px 1fr;
+	grid-template-columns: 1fr 84px 1fr; /*still works, error does not show in VSC*/
 	grid-template-rows: 100px;
 	align-content: center;
 	margin: 0px;
@@ -81,7 +81,7 @@ p, p a {
 .navmenu {
 	position: fixed;
 	display: grid;
-	grid-template-columns: minmax(180px,250px) 2em minmax(180px,250px) 2em 80px 2em minmax(180px,250px) 1em minmax(180px,250px);
+	grid-template-columns: minmax(150px,250px) 2em minmax(150px,250px) 2em 80px 2em minmax(150px,250px) 1em minmax(150px,250px);
 	grid-template-rows: 40px 40px 50px;
 	width: 100%;
 	padding: 0;
@@ -90,17 +90,62 @@ p, p a {
 	justify-content: center;
 	text-align: center;
 }
+/*grid only for the lines between nav-decoration dots*/
+.line-grid{
+	display: grid;
+	position: fixed;
+	width: 100%;
+	grid-template-columns:  0.8em 1fr minmax(2em,6em) 25px minmax(140px,260px) 25px minmax(90px, 130px) 100px minmax(90px, 130px) 25px minmax(140px,260px) 25px minmax(2em,6em) 1fr; /*0.8em is to fix alignment.*/
+	grid-template-rows: 90px;
+	padding: 0px;
+	justify-content: center;
+	margin-top: 45px;
+}
+.line-full {
+	background-color: white;
+	width: minmax(80,260);
+	height: 4px;
+	margin-top: 9px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 100px;
+}
+.line-fade-r {
+	background-image: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0));
+	width: minmax(80,260);
+	height: 4px;
+	margin-top: 9px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 100px;
+}
+.line-fade-l {
+	background-image: linear-gradient(to left, rgba(255,255,255,1),rgba(255,255,255,0));
+	width: minmax(80,260);
+	height: 4px;
+	margin-top: 9px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 100px;
+}
+
+
 
 /*main grid element 2*/
 .mge2 { 
 	/*border: 1px solid white; /*temporary to see boxes*/
 }
+
+.mge3 { 
+	/* border: 1px solid white; /*temporary to see boxes*/
+	/*margin-top: 45px;*/
+}
 /*grid template areas*/
 .content-grid {
 	display: grid;
 	justify-self: center;
-	grid-template-columns: 3em minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px)3em;
-	grid-template-rows: 65px 1fr 1fr 1fr 1fr 1fr 50px 50px;
+	grid-template-columns: 3em minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) minmax(130px, 250px) 3em;
+	grid-template-rows: 65px 1fr 1fr 1fr 1fr 1fr 50px 50px; /*still works, error does not show in VSC*/
 	margin-top: 95px;
 }
 
@@ -122,4 +167,6 @@ footer {
 }
 
 /*responsive elements for under 800px*/
-@media screen
+@media screen and (max-width: 800px) {
+	h1, h1 a {font-size: 20px}
+}
