@@ -292,6 +292,10 @@ a:hover {
 	line-height: 2;
 }
 
+li > * {
+	display: inline-flex;
+}
+
 .overlay-decoration {
 	margin: 1.5em 1em;
 	display: grid;
