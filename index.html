@@ -6,14 +6,15 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400&display=swap" rel="stylesheet">
+<script src="nav.js" defer></script>
 </head>
 <body>
 	<section class="bodycontainer">
 	<nav> <!-- navigation bar start-->
 		<section class="bar">
 		</section>
-		<section class="mgrid">
+		<section class="trigrid">
 			<div></div>
 			<div class="tri"></div>
 			<div></div>
@@ -30,7 +31,6 @@
 		<div><a href=""><h1>CONTACT</h1></a></div>
 	</nav>
 		<section class="line-grid">
-			<div></div>
 			<div></div>
 			<div>
 				<div class="line-fade-l"></div>
@@ -78,8 +78,32 @@
 		<!--Mobile-only stuff-->
 		<section class="navbar-mobile">
 			<div><img src="img/logo-white-3.svg" alt="" class="logo-mobile"></div>
-			<div><h1 class="title-mobile">HOME</h1></div>
-			<div><img src="Img/borgar.svg" class="borgar"></div>
+			<div><h1 class="title-mobile">PORTFOLIO</h1></div>
+			<button class="borgar overlay-toggle">
+			</button>
+			<section class="navbar-overlay-mobile" data-visible="false">
+				<h1 style="text-align: center;">MENU</h1>
+				<div class=overlay-decoration>
+					<div class="line-fade-l"></div>
+					<div class="diamond" data-small="true" data-fill="true"></div>
+					<div class="line-fade-r"></div>
+				</div>
+				<ul>
+					<li><h1><a href="#"><div class="diamond"></div>HOME</h1></a></li>
+					<li><h1><a href="#"><div class="diamond"></div>PORTFOLIO</h1></a></li>
+					<li><h1><a href="#"><div class="diamond"></div>ABOUT ME</h1></a></li>
+					<li>
+						<div>
+							<a href="#"><div class="diamond" data-small="true"></div><h1>CONTACT</h1></a>
+						</div>
+					</li>
+				</ul>
+				<div class=overlay-decoration>
+					<div class="line-fade-l"></div>
+					<div class="diamond" data-small="true" data-fill="true"></div>
+					<div class="line-fade-r"></div>
+				</div>
+			</section>
 		</section>
 		</div> <!-- navigation bar end-->
 	</section>
@@ -94,22 +118,52 @@
 		<div></div>
 	</div>
 		<main>
-			<div class="imgplaceholder"></div>
-			<div class="imgplaceholder2"></div>
-			<div class="imgplaceholder2"></div>
-			<div class="imgplaceholder2"></div>
-			<div class="imgplaceholder2"></div>
+			<div></div>
+			<div class="contentgrid">
+				<article class="column-span-2-large" style="background-image: url(img/map.webp);">
+					<div>
+					<h2>Test Title</h2>
+					<p>Test Desc</p>
+					</div>
+				</article>
+				<article style="background-image: url(img/direstone.jpg);">
+					<div>
+						<h2>Test Title</h2>
+						<p>Test Desc</p>
+					</div>
+				</article>
+				<article style="background-image: url(img/Ravenhead.jpg);">
+					<div>
+						<h2>Test Title</h2>
+						<p>Test Desc</p>
+					</div>
+				</article>
+				<article style="background-image: url(img/map.webp);">
+					<div>
+						<h2>Test Title</h2>
+						<p>Test Desc</p>
+					</div>
+				</article>
+				<article style="background-image: url(img/map.webp);">
+					<div>
+						<h2>Test Title</h2>
+						<p>Test Desc</p>
+					</div>
+				</article>
+			</div>
 		</main>
 
 	<!--Footer section start-->
-	<div class="footer-grid">
+	<div>
 	<footer>
+		<div></div>
 		<div></div>
 		<div class="line-fade-l"></div>
 		<div class="diamond" data-small="true" data-fill="true"></div>
 		<div class="diamond" data-small="true" data-fill="true"></div>
 		<div class="diamond" data-small="true" data-fill="true"></div>
 		<div class="line-fade-r"></div>
+		<div></div>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, mollitia consectetur! Nulla laboriosam aspernatur, quasi libero at optio ipsum aperiam!?</p>
 	</footer>
 	</div>
