@@ -36,9 +36,10 @@ main { /*center content, and make sure that max width is capped*/
 }
 
 .contentgrid > * { /*set images to a height where they wont disappear*/
-	max-height: 50vh;
-	min-height: 33vh;
+	max-height: 55vh;
+	min-height: 38vh;
 	background-size:cover;
+	background-position: center center;
 }
 
 .gradientbox { /*add a gradient to the foreground for the text*/
@@ -234,6 +235,13 @@ a:hover {
 	justify-self: center;
 }
 
+li {
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	align-content: center;
+	align-items: center;
+}
+
 
 /*adjust diamond shapes when classified as small*/
 .diamond[data-small="true"]{
@@ -290,6 +298,8 @@ a:hover {
 	right: 0;
 	top: 0px;
 	width: 80vw;
+	min-width: 280px ;
+	max-width: 400px;
 	height: 100vh;
 	transform: translateX(126%);
 	transition: transform 250ms ease-out;
@@ -304,9 +314,6 @@ a:hover {
 	line-height: 2;
 }
 
-li > * {
-	display: inline-flex;
-}
 
 .overlay-decoration {
 	margin: 1.5em 1em;
