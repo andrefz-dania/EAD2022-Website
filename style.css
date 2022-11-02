@@ -38,10 +38,13 @@ main { /*center content, and make sure that max width is capped*/
 .contentgrid > * { /*set images to a height where they wont disappear*/
 	max-height: 50vh;
 	min-height: 33vh;
+	background-size:cover;
 }
 
 .contentgrid > * > * { /*add a gradient to the foreground for the text*/
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+	width: 100%;
+	padding: 1em;
 }
 
 .contentgrid h2,
