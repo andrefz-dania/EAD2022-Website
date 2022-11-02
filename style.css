@@ -45,18 +45,21 @@ main { /*center content, and make sure that max width is capped*/
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
 	width: 100%;
 	padding: 1em;
-	height: 50%;
+	height: 35.1%;
 }
 
 .gradientspacer {
-	height: 50%;
+	height: 65%;
+}
+
+.contentimg{
+	border-radius: 3px;
 }
 
 .contentgrid h2,
 .contentgrid p {
 	line-height: 1.2;
-	text-indent: 1em;
-	margin-bottom: 5px;
+	align-self: center;
 }
 
 @media (min-width:1100px) {
