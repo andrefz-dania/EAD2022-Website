@@ -41,10 +41,15 @@ main { /*center content, and make sure that max width is capped*/
 	background-size:cover;
 }
 
-.contentgrid > * > * { /*add a gradient to the foreground for the text*/
+.gradientbox { /*add a gradient to the foreground for the text*/
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
 	width: 100%;
 	padding: 1em;
+	height: 50%;
+}
+
+.gradientspacer {
+	height: 50%;
 }
 
 .contentgrid h2,
@@ -62,6 +67,7 @@ main { /*center content, and make sure that max width is capped*/
 		grid-template-columns: minmax(125px,1000px) minmax(125px,1000px);
 		gap: 1.5em;
 		border-radius: 0.5em;
+		margin-bottom: 25vh;
 	}
 }
 
@@ -378,5 +384,6 @@ li > * {
 
 	.contentgrid {
 		margin: 0.5em 0em;
+	
 	}
 }
