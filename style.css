@@ -47,18 +47,19 @@ main { /*center content, and make sure that max width is capped*/
 	min-height: 38vh;
 	background-size:cover;
 	background-position: center center;
+	display: flex;
 }
 
 .gradientbox { /*add a gradient to the foreground for the text*/
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
 	width: 100%;
 	padding: 1em;
-	height: 35.1%;
-	min-height: 5em;
+	padding-top: 4em;
+	align-self: flex-end;
+
 }
 
 .gradientspacer {
-	height: 65%;
 }
 
 .contentimg{
@@ -77,7 +78,7 @@ main { /*center content, and make sure that max width is capped*/
 	padding-top: minmax(0em, 1em);
 }
 
-@media (min-width:1100px) {
+@media (min-width:1101px) {
 	.column-span-2-large {
 		grid-column: span 2;
 	}
@@ -87,6 +88,15 @@ main { /*center content, and make sure that max width is capped*/
 		border-radius: 0.5em;
 		margin-bottom: 25vh;
 	}
+}
+
+.align-right {
+	text-align: end;
+}
+
+.titlegrid-double {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 /*portfolio page specific*/
@@ -99,7 +109,7 @@ main { /*center content, and make sure that max width is capped*/
 .category {
 	background-color: grey;
 	position: relative;
-	height: 35vh;
+	height: 28vh;
 	width: inherit;
 	margin: 1em;
 	border-radius: 15px;
@@ -109,13 +119,16 @@ main { /*center content, and make sure that max width is capped*/
 	background-position: center center;
 }
 
-.category h2, p {
+.category h2, .category p {
 	margin-top: 5px;
+	margin-left: 1em;
+	margin-right: 1em;
 	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.726);
 }
 
 .portfolionav {
 	display: grid;
+	margin-left: 1em;
 	grid-template-columns: 2em 10em;
 	grid-template-rows: 1fr 3em 3em 3em 3em 3em 4fr;
 	grid-row: span 5;
@@ -200,6 +213,58 @@ main { /*center content, and make sure that max width is capped*/
 }
 
 /*contact page specific*/
+
+.contacticon {
+	width: 30px;
+	height: 30px;
+}
+
+.contactgrid {
+	display: grid;
+	grid-template-columns: 2fr 30px 6em 14em 1fr;
+	gap: 0.5em;
+	justify-content: end;
+	row-gap: 2em;
+	height: 8em
+
+}
+
+@media (max-width: 1100px){
+	.contactgrid {
+		grid-template-columns: 1fr 30px minmax(0px, 100px) 14em 1fr;
+		margin: 1em;
+	}
+}
+
+.contactform {
+	text-align: center;
+	display: grid;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+}
+
+.input1, .input2 {
+	border-radius: 2em;
+	padding: 0.5em;
+	width: 500px;
+	background-color: grey;
+	border: 1px solid white;
+	word-wrap: normal;
+}
+
+.input2 {
+	height: 10em;
+}
+
+@media (max-width: 1100px){
+	.input1, .input2 {
+		width: 80vw;
+	}
+}
+
+
 
 
 /*main*/
@@ -555,5 +620,60 @@ li {
 	.contentgrid {
 		margin: 0.5em 0em;
 	
+	}
+	.mobile-hidden {
+		display: none;
+	}
+}
+
+.smallscreen-visible {
+	display: none;
+}
+
+.smallscreen-divider {
+	display: none;
+}
+
+@media (max-width: 1100px) {
+	.smallscreen-hidden {
+		display: none;
+	}
+	.smallscreen-visible {
+		display: block;
+	}
+	.smallscreen-divider {
+		display: grid;
+	}
+
+	.contactgrid {
+		position: relative;
+		top: 3em;
+	}
+	.contactform {
+		position: relative;
+		top: 3em;
+	}
+}
+
+@media (min-width: 1921px) {
+	p {
+		font-size: 19px;
+	}
+}
+
+@media (max-width: 450px) {
+	p {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+	h3 {
+		font-size: 16px;
 	}
 }

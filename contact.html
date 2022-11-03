@@ -78,7 +78,7 @@
 		<!--Mobile-only stuff-->
 		<section class="navbar-mobile">
 			<div><img src="img/logo-white-3.svg" alt="" class="logo-mobile"></div>
-			<div><h1 class="title-mobile">PORTFOLIO</h1></div>
+			<div><h1 class="title-mobile">CONTACT</h1></div>
 			<button class="borgar overlay-toggle">
 			</button>
 			<section class="navbar-overlay-mobile" data-visible="false">
@@ -134,10 +134,12 @@
 	</section>
 
 	<!-- MAIN CONTENT SECTION-->
-	<div class="title">
+	<div class="title mobile-hidden smallscreen-hidden">
 		<div></div>
-		<h2>CONTACT ME</h2>
-		<div></div>
+		<div class="titlegrid-double">
+			<h2>CONTACT FORM</h2>
+			<h2 class="align-right" style="padding-right: 2em;">DIRECT</h2>
+		</div>
 		<div></div>
 		<h3></h3>
 		<div></div>
@@ -145,16 +147,39 @@
 		<main>
 			<div></div>
 			<div class="contentgrid">
-				<p>If you want to reach out to me, you can find my details here. <br> You can also contact me through other channels, such as Discord, but these are the methods I am most likely to reply to.
-				</p>
-				<div>
-					<div></div>
-					<h3>PHONE :</h3>
-					<h3>+45 29 40 16 77</h3>
-					<div></div>
-					<h3>E-MAIL :</h3>
-					<h3>andre.f.z@protonmail.com</h3>
-				</div>
+				<div class="contactform">
+				<form>
+					<h2 class="smallscreen-visible">CONTACT FORM</h2>
+						<p>
+						<label><h3>YOUR E-MAIL:</h3></label>
+						<input class="input1" type="text"></p>
+						<p>
+						<label><h3>SUBJECT:</h3></label>
+						<input class="input1" type="text"></p>
+						<p>
+						<label><h3>MESSAGE:</h3></label>
+						<input class="input2" type="text"></p>
+				</form>
+				<p>NOTE: This form is under construction, and not yet operational</p></div>
+				<article>
+					<div class="overlay-decoration smallscreen-divider" style="margin-top: 4em;">
+						<div class="line-fade-l"></div>
+						<div class="diamond" data-small="true" data-fill="true"></div>
+						<div class="line-fade-r"></div>
+					</div>
+					<div class="smallscreen-visible" style="text-align: center;  margin-bottom: -3em;"><h2>DIRECT</h2></div>
+					<div class="contactgrid">
+						<div></div>
+						<div><img src="img/icon-tlf.svg" alt="" class="contacticon"></div>
+						<div><h3 class="mobile-hidden">PHONE :</h3></div>
+						<h3 class="align-right">+45 29 40 16 77</h3>
+						<div></div>
+						<div></div>
+						<div><img src="img/icon-mail.svg" alt="" class="contacticon"></div>
+						<div><h3 class="mobile-hidden">E-MAIL :</h3></div>
+						<h3 class="align-right">andre.f.z@protonmail.com</h3>
+					</div>
+				</article>
 			</div>
 		</main>
 
