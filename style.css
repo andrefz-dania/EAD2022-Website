@@ -89,7 +89,7 @@ main { /*center content, and make sure that max width is capped*/
 	}
 }
 
-/*portfolio-page-specific*/
+/*portfolio page specific*/
 
 .portfoliogrid {
 	display: grid;
@@ -158,7 +158,7 @@ main { /*center content, and make sure that max width is capped*/
 	}
 }
 
-/*aboutme-specific*/
+/*aboutme page specific*/
 
 .timeline {
 	display: grid;
@@ -185,6 +185,10 @@ main { /*center content, and make sure that max width is capped*/
 	padding: 1em;
 }
 
+.aboutme p {
+	line-height: 1.2;
+}
+
 .me {
 	background-image: url(img/Self.jpg);
 	height: 50vh;
@@ -195,6 +199,7 @@ main { /*center content, and make sure that max width is capped*/
 	max-width: 800px;
 }
 
+/*contact page specific*/
 
 
 /*main*/
