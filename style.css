@@ -15,17 +15,24 @@ body {
 	overflow-x: hidden; /*prevents mobile navigation menu from creating a scrollbar sideways*/
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
+
 .bodycontainer {
 	display: grid;
 	color: white;
 	height: 100px;
 	align-content: flex-start;
 	margin: 0px;
+	z-index: 2;
 }
 
 main { /*center content, and make sure that max width is capped*/
 	display: grid;
 	grid-template-columns: 1fr minmax(100px,2000px) 1fr;
+	z-index: -99999;
 }
 
 .contentgrid {
@@ -47,6 +54,7 @@ main { /*center content, and make sure that max width is capped*/
 	width: 100%;
 	padding: 1em;
 	height: 35.1%;
+	min-height: 5em;
 }
 
 .gradientspacer {
@@ -59,8 +67,14 @@ main { /*center content, and make sure that max width is capped*/
 
 .contentgrid h2,
 .contentgrid p {
-	line-height: 1.2;
+	line-height: 0.8;
 	align-self: center;
+	padding-bottom: 0px;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562);
+}
+
+.contentgrid h2 {
+	padding-top: minmax(0em, 1em);
 }
 
 @media (min-width:1100px) {
@@ -75,13 +89,88 @@ main { /*center content, and make sure that max width is capped*/
 	}
 }
 
+/*portfolio-page-specific*/
+
+.portfoliogrid {
+	display: grid;
+	grid-template-columns: 12.8em 1fr;
+
+}
+.category {
+	background-color: grey;
+	position: relative;
+	height: 35vh;
+	width: inherit;
+	margin: 1em;
+	border-radius: 15px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-size:cover;
+	background-position: center center;
+}
+
+.category h2, p {
+	margin-top: 5px;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.726);
+}
+
+.portfolionav {
+	display: grid;
+	grid-template-columns: 2em 10em;
+	grid-template-rows: 1fr 3em 3em 3em 3em 3em 4fr;
+	grid-row: span 5;
+	column-gap: 0.8em;
+	align-items: center;
+	position: fixed;
+	height: 75vh;
+}
+
+.categoryspacer {
+
+}
+
+.categorygradient-l {
+	background-image: linear-gradient(to left,  rgba(0,0,0,0),rgba(0,0,0,0.75), rgba(0,0,0,1));
+}
+
+.categorygradient-r {
+	background-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,0.75), rgba(0,0,0,1));
+}
+
+@media (max-width: 800px){
+	.portfolionav {
+		display: none;
+	}
+	.portfoliogrid {
+		grid-template-columns: 0 1fr;
+	}
+	.category {
+		gap: 0;
+		margin: 0;
+		border-radius: 0;
+		display: flex;
+	}
+	.categorygradient-l,
+	.categorygradient-r {
+		padding: 1em;
+		background-image: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.75), rgba(0,0,0,1));
+		width: 100%;
+		align-self:flex-end;
+
+	}
+	.category p {
+	}
+}
+
+/*main*/
 
 .title{
 	display: grid;
 	grid-template-columns: 1fr minmax(300px, 1600px) 1fr;
 	background: none;
 	margin-left: 3em;
-	line-height: 1.2;
+	line-height: 1.5;
+	padding-block: 10px;
 }
 
 footer {
@@ -147,6 +236,7 @@ a:hover {
 	margin: 0px;
 	padding: 0px;
 	position: fixed;
+	z-index: 2;
 }
 
 .bar { /*top bar navigation background*/
@@ -156,6 +246,7 @@ a:hover {
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0px;
+	z-index: 2;
 }
 
 /*top bar triangular outcrop background - this was a pain to align*/
@@ -179,6 +270,7 @@ a:hover {
 	margin-top: 5px;
 	justify-content: center;
 	text-align: center;
+	z-index: 3;
 }
 
 /*grid only for the lines between nav-decoration dots*/
@@ -190,6 +282,7 @@ a:hover {
 	padding: 0px;
 	justify-content: center;
 	margin-top: 45px;
+	z-index: 3;
 }
 /*drawing of decorative elements*/
 .line-full {
@@ -216,6 +309,24 @@ a:hover {
 	margin-left: 10px;
 	margin-right: 10px;
 	border-radius: 100px;
+}
+
+.line-fade-t {
+	background-image: linear-gradient(to top, rgba(255,255,255,1),rgba(255,255,255,0));
+	width: 3px;
+	height: 100%;
+	border-radius: 100px;
+	justify-self: center;
+
+}
+
+.line-fade-b {
+	background-image: linear-gradient(to bottom, rgba(255,255,255,1),rgba(255,255,255,0));
+	width: 3px;
+	height: 100%;
+	margin: 0px;
+	border-radius: 100px;
+	justify-self: center;
 }
 
 .diamond {
@@ -273,6 +384,7 @@ li {
 
 .navbar-mobile {
 	display:none;
+	z-index: 2;
 }
 
 .borgar {
