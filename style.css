@@ -42,7 +42,7 @@ main { /*center content, and make sure that max width is capped*/
 	margin: 0.5em 2em;
 }
 
-.contentgrid > * { /*set images to a height where they wont disappear*/
+.contentimg { /*set images to a height where they wont disappear*/
 	max-height: 55vh;
 	min-height: 38vh;
 	background-size:cover;
@@ -125,10 +125,6 @@ main { /*center content, and make sure that max width is capped*/
 	height: 75vh;
 }
 
-.categoryspacer {
-
-}
-
 .categorygradient-l {
 	background-image: linear-gradient(to left,  rgba(0,0,0,0),rgba(0,0,0,0.75), rgba(0,0,0,1));
 }
@@ -161,6 +157,45 @@ main { /*center content, and make sure that max width is capped*/
 	.category p {
 	}
 }
+
+/*aboutme-specific*/
+
+.timeline {
+	display: grid;
+	grid-template-columns: 35px 1fr;
+	grid-template-rows: 70px repeat(8, 35px 100px);
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.timeline h3 {
+	margin-left: 1em;
+}
+
+.timeline p {
+	align-self:flex-start;
+}
+
+.aboutme {
+	padding: 1em;
+}
+
+.aboutme > * {
+	padding: 1em;
+}
+
+.me {
+	background-image: url(img/Self.jpg);
+	height: 50vh;
+	background-size:cover;
+	background-repeat: no-repeat;
+	border-radius: 1em;
+	background-position:center 35%;
+	max-width: 800px;
+}
+
+
 
 /*main*/
 
@@ -294,6 +329,15 @@ a:hover {
 	margin-right: 10px;
 	border-radius: 100px;
 }
+
+.line-vert {
+	background-color: white;
+	width: 3px;
+	height: 100%;
+	border-radius: 100px;
+	justify-self: center;
+}
+
 .line-fade-r {
 	background-image: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0));
 	height: 3px;
@@ -302,6 +346,7 @@ a:hover {
 	margin-right: 10px;
 	border-radius: 100px;
 }
+
 .line-fade-l {
 	background-image: linear-gradient(to left, rgba(255,255,255,1),rgba(255,255,255,0));
 	height: 3px;
@@ -442,8 +487,6 @@ li {
 	margin-top: 1em;
 	margin-left: 0.5em;
 }
-
-/*grid template areas*/
 
 
 /*responsive elements for under 800px*/
