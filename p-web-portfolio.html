@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portfolio - Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400&display=swap" rel="stylesheet">
+<script src="nav.js" defer></script>
+</head>
+<body>
+	<section class="bodycontainer">
+	<nav> <!-- navigation bar start-->
+		<section class="bar">
+		</section>
+		<section class="trigrid">
+			<div></div>
+			<div class="tri"></div>
+			<div></div>
+		</section>
+	<div class="navmenu">
+		<div><a href="index.html"><h1>HOME</h1></a></div>
+		<div></div>
+		<div><a href="portfolio.html"><h1>PORTFOLIO</h1></a></div>
+		<div></div>
+		<div><a href="index.html"><img src="img/logo-white-3.svg" alt="" class="logo"></a></div>
+		<div></div>
+		<div><a href="aboutme.html"><h1>ABOUT ME</h1></a></div>
+		<div></div>
+		<div><a href="contact.html"><h1>CONTACT</h1></a></div>
+	</nav>
+		<section class="line-grid">
+			<div></div>
+			<div>
+				<div class="line-fade-l"></div>
+			</div>
+				<div class="diamond-container">
+					<a href="index.html">
+						<div class="diamond"></div>
+					</a>
+				</div>
+			<div>
+				<div class="line-full"></div>
+			</div>
+				<div class="diamond-container">
+					<a href="portfolio.html">
+						<div class="diamond" data-fill="true"></div>
+					</a>
+				</div>
+			<div>
+				<div class="line-full"></div></div>
+			<div></div>
+			<div>
+				<div class="line-full"></div>
+			</div>
+				<div class="diamond-container">
+					<a href="aboutme.html">
+						<div class="diamond"></div>
+					</a>
+				</div>
+			<div>
+				<div class="line-full"></div>
+			</div>
+				<div class="diamond-container">
+					<a href="contact.html">
+						<div class="diamond"></div>
+					</a>
+				</div>
+			<div>
+				<div class="line-fade-r"></div>
+			</div>
+			<div></div>
+		</section>
+		<!--Holy shit thats a lot of divs-->
+
+
+		<!--Mobile-only stuff-->
+		<section class="navbar-mobile">
+			<div><img src="img/logo-white-3.svg" alt="" class="logo-mobile"></div>
+			<div><h1 class="title-mobile">ABOUT ME</h1></div>
+			<button class="borgar overlay-toggle">
+			</button>
+			<section class="navbar-overlay-mobile" data-visible="false">
+				<h1 style="text-align: center;">MENU</h1>
+				<div class=overlay-decoration>
+					<div class="line-fade-l"></div>
+					<div class="diamond" data-small="true" data-fill="true"></div>
+					<div class="line-fade-r"></div>
+				</div>
+				<ul>
+					<li>
+						<a href="index.html">
+							<div class="diamond"></div>
+						</a>
+						<a href="index.html">
+							<h1>HOME</h1>
+						</a>
+					</li>
+					<li>
+						<a href="portfolio.html">
+							<div class="diamond" data-fill="true"></div>
+						</a>
+						<a href="portfolio.html">
+							<h1>PORTFOLIO</h1>
+						</a>
+					</li>
+					<li>
+						<a href="aboutme.html">
+							<div class="diamond"></div>
+						</a>
+						<a href="aboutme.html">
+							<h1>ABOUT ME</h1>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<div class="diamond"></div>
+						</a>
+						<a href="contact.html">
+							<h1>CONTACT</h1>
+						</a>
+					</li>
+					
+				</ul>
+				<div class=overlay-decoration>
+					<div class="line-fade-l"></div>
+					<div class="diamond" data-small="true" data-fill="true"></div>
+					<div class="line-fade-r"></div>
+				</div>
+			</section>
+		</section>
+		</div> <!-- navigation bar end-->
+	</section>
+
+	<!-- MAIN CONTENT SECTION-->
+	<div class="title">
+		<div></div>
+		<h2>PORTFOLIO WEBSITE</h2>
+		<div></div>
+		<div></div>
+		<h3></h3>
+		<div></div>
+	</div>
+		<main>
+			<div></div>
+			<div class="contentgrid">
+				<article class="article-block">
+					<h3>Design</h3>
+					<br>
+					<p>This website was originally designed over the course of a week, as a part of my education at EA Dania. It was initially contructed in Adobe XD, with both mobile and desktop layouts, for the purposes of demonstrating a portfolio.
+						<br><br>
+						I based the design loosely on the shapes I already had in my logo & business-card, and went through a few different iterations before settling on this one. <br><br> The following is one of the designs I eventually discarded</p>
+						<br>
+						<img class="img" src="img/webwip1.png" alt="Old Web Design concept">
+						<br>
+						<p>The second version, I found a lot more fitting. Here, I used a lot less colour, and the aesthetic was a lot less noisy. But the layout and shapes also changed a lot, matching the initial inspirations a lot more closely. <br><br>
+						This is the design I decided to continue working with, and after the project was over, I received a lot of useful feedback to incorporate into the final version, when the time came</p>
+						<br>
+						<img class="img" src="img/webwip2.png" alt="Newer Web Design concpet">
+						<br>
+						<br>
+				</article>
+				<article class="article-block">
+					<h3>Development</h3>
+					<br>
+					<p>When the time arrived to begin putting the concept into reality, I knew it was going to be quite challening. I had some prior experience with HTML, but none with CSS and JavaScript, which I did end up needing for the popout menu on smaller devices.
+					<br><br>
+					I managed to incorporate the majority of the feedback I received from the concept, particularly regarding fonts & navigation. From these initial tests, it appeared not many changes were needed in other areas - so I began writing the HTML and CSS.
+					<br><br>
+					Underway, I encountered a couple challenges, especially regarding alignment of various elements using flexbox and CSS grids, but perhaps the strangest of all was the triangular outcrop from the top navigation bar. This shape was rather awkward to implement, especially while maintaining its shadow effect and dynamic width. While I initially tried to write it out as an SVG, it was rather cumbersome, so I settled on using a simple rotation of another element.
+					</p>
+					<br>
+					<img class="img" src="img/webwip3.png" alt="Triangular outcrop closeup">
+					<br>
+					<p>After the long learning process, and many hours of troubleshooting, the website before you today is the result.</p>
+				</article>
+			</div>
+		</main>
+
+	<!--Footer section start-->
+	<div>
+	<footer>
+		<div></div>
+		<div></div>
+		<div class="line-fade-l"></div>
+		<div class="diamond" data-small="true" data-fill="true"></div>
+		<div class="diamond" data-small="true" data-fill="true"></div>
+		<div class="diamond" data-small="true" data-fill="true"></div>
+		<div class="line-fade-r"></div>
+		<div></div>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, mollitia consectetur! Nulla laboriosam aspernatur, quasi libero at optio ipsum aperiam!?</p>
+	</footer>
+	</div>
+</body>
+</html>
