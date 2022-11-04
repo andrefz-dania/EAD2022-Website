@@ -333,9 +333,15 @@ footer p {
 /*Fonts and text*/
 h1, h1 a {
 	color: white;
-	font-size: clamp(16px,16px + 1vw,28px);
+	font-size: clamp(16px,16px + 1vw, 28px);
 	font-family: "Reem Kufi", "Rubik", "Noto Sans", "century gothic", "calibri", "sans-serif";
 	margin: 0px;
+}
+
+.navmenu h1,
+.navmenu a h1 {
+	font-size: clamp(16px, 22px, 25px);
+	margin-top: 0.35em;
 }
 
 h2, h2 a {
