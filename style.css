@@ -387,7 +387,7 @@ a:hover {
 .bar { /*top bar navigation background*/
 	height: 90px;
 	width: 100%;
-	background-color: #262626; /*legacy support*/
+	background-color: #262626; 
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0px;
@@ -398,7 +398,7 @@ a:hover {
 .tri { 
 	height: 100px;
 	width: 100px;
-	background-color: #262626; /*legacy support*/
+	background-color: #262626; 
 	box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
 	transform: rotate(45deg);
 	margin-top: 37px;
@@ -423,7 +423,7 @@ a:hover {
 	display: grid;
 	position: fixed;
 	width: 100%;
-	grid-template-columns:  1fr minmax(2em,15em) 25px minmax(140px,260px) 25px minmax(90px, 130px) 100px minmax(90px, 130px) 25px minmax(140px,260px) 25px minmax(2em,15em) 1fr; /*0.8em is to fix alignment.*/
+	grid-template-columns:  1fr minmax(2em,15em) 25px minmax(140px,260px) 25px minmax(90px, 130px) 100px minmax(90px, 130px) 25px minmax(140px,260px) 25px minmax(2em,15em) 1fr;
 	padding: 0px;
 	justify-content: center;
 	margin-top: 45px;
