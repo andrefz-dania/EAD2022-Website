@@ -298,6 +298,11 @@ main { /*center content, and make sure that max width is capped*/
 	}
 }
 
+.contactimg {
+	width: 220px;
+	justify-self: flex-end;
+	align-self: flex-start;
+}
 
 
 
